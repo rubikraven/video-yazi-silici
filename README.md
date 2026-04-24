@@ -1,10 +1,12 @@
-# Video Yazı Silici
+# AI Watermark Remover & Video Restoration
 
-Bu proje, video üzerindeki sabit yazı veya logo alanlarını OpenCV ile temizlemek için hazırlanmıştır.
+Bu proje, CapCut veya benzeri AI video editörlerinin export sırasında zorunlu olarak eklediği "AI" etiketlerini ve filigranları (watermark) görüntü işleme teknikleri kullanarak temizlemek için geliştirilmiştir.
 
-Video dosyası GitHub’a eklenmemiştir. Kullanmak isteyen kişi kendi videosunu proje klasörüne koymalı ve `main.py` içindeki dosya adını kendi videosuna göre değiştirmelidir.
+## Teknik Detaylar
+- **OpenCV Inpainting:** Silinen alanın çevredeki dokularla (Telea algoritması) doğal bir şekilde doldurulması.
+- **Dinamik Maskeleme:** Belirli koordinatlara göre otomatik maske oluşturma.
+- **Pixelate & Blur:** İnatçı kalıntılar için çok katmanlı temizlik.
 
 ## Kurulum
-
 ```bash
-pip install opencv-python numpy
+pip install -r requirements.txt
